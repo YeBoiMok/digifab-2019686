@@ -4,7 +4,7 @@
     }
     
     body{
-        background-color:darkgrey;
+        background-color:lightgrey;
     }
     
     .row::after {
@@ -32,11 +32,11 @@
     .col-12 {width: 100%;}
     
     html {
-      font-family: Arial;
+      font-family: "Lucida Sans", sans-serif;
     }
     
     .header {
-      background-color: grey;
+      background-color: #1abc9c;
       color: white;
       padding: 15px;
     }
@@ -50,10 +50,10 @@
     .menu li {
       padding: 8px;
       margin-bottom: 7px;
-      background-color: powderblue;
+      background-color: grey;
       color: #ffffff;
     }
     
     .menu li:hover {
-      background-color: #ddd;
+      background-color: #f1f1f1;
     }
