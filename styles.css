@@ -57,3 +57,14 @@
     .menu li:hover {
       background-color: #ddd;
     }
+
+    table, th, td {
+      border:2px solid black;
+      height: 20px;
+      border-collapse: collapse
+    }
+
+    th, td {
+      padding: 10px;
+      background-color: lightgrey;
+    }
