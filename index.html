@@ -1,28 +1,51 @@
 <!DOCTYPE html>
 <html>
-<link type="text/css" rel="stylesheet" href="styles.css">
+<link type="text/css" rel="stylesheet" href="styles.css" >
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <body>
 
 <div class="header">
   <h1>Welcome to my website!</h1>
 </div>
 
-<div class="row">
-  <div class="col-3 menu">
-    <ul>
-      <li><a style="text-decoration:none" href="index.html">Homepage</a></li>
-      <li><a style="text-decoration:none" href="aboutme.html">About me</a></li>
-      <li><a style="text-decoration:none" href="#">Something</a></li>
-      <li><a style="text-decoration:none" href="#">Something</a></li>
-      <li><a style="text-decoration:none" href="#">Something</a></li>
-      <li><a style="text-decoration:none" href="#">Something</a></li>
-    </ul>
+<div class="sidenav">
+  <a href="index.html">Home</a>
+  <a href="aboutme.html">About me</a>
+  <a href="#">Something</a>
+  <a href="#">Something</a>
+  <button class="dropdown-btn">Dropdown 
+    <div class="fa fa-caret-down"></div>
+  </button>
+  <div class="dropdown-container">
+    <a href="#">Link 1</a>
+    <a href="#">Link 2</a>
+    <a href="#">Link 3</a>
   </div>
-
-  <div class="col-9">
-    <h1 style="text-decoration: underline">Digital Fabrication & Prototyping Fundamentals</h1>
-  </div>
+  <a href="#">Something</a>
 </div>
+
+<div class="main">
+  <h1>Digital Fabrication & Prototyping Fundamentals</h1>
+    <h2 style="text-decoration: underline">What is it?</h2>
+    <p>Digital Fabrication & Prototyping Fundamentals is a module that equips students with core knowledge and skills in digital fabrication, such as computer aided design, 2D/3D modelling, 3D printing, laser-cutting, electronics and embedded programming. These skills are developed through a range of hands-on, real-world activities.</p>
+</div>
+
+<script>
+  var dropdown = document.getElementsByClassName("dropdown-btn");
+  var i;
+  
+  for (i = 0; i < dropdown.length; i++) {
+    dropdown[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var dropdownContent = this.nextElementSibling;
+    if (dropdownContent.style.display === "block") {
+    dropdownContent.style.display = "none";
+    } else {
+    dropdownContent.style.display = "block";
+    }
+    });
+  }
+  </script>
 
 </body>
 </html>
