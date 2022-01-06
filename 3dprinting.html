@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<link type="text/css" rel="stylesheet" href="styles.css" >
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<body>
+
+<title>Digifab Website</title>
+
+<div class="header">
+  <h1>Welcome to my website!</h1>
+</div>
+
+<div class="sidenav">
+    <a href="index.html">Home</a>
+    <a href="aboutme.html">About me</a>
+    <a href="safety.html">Fablab Safety</a>
+    <a href="tools.html">Tools</a>
+    <button class="dropdown-btn">Project 
+      <div class="fa fa-caret-down"></div>
+    </button>
+    <div class="dropdown-container">
+      <a href="webdev.html">Web Development</a>
+      <a href="3dprinting.html">3D printing</a>
+      <a href="lasercut.html">Laser Cutting</a>
+    </div>
+    <a href="#">Something</a>
+  </div>
+
+<div class="main">
+  <img src="./images/3dprint knight.jpg" alt="3d printing knight" width="500" height="500">
+  <p>This is the process of 3d printing the knight chess piece.</p>
+
+  <img src="./images/knight.jpg" alt="knight chess piece" width="600" height="500">
+  <p>This is the completed knight chess piece.</p>
+</div>
+
+<script>
+  var dropdown = document.getElementsByClassName("dropdown-btn");
+  var i;
+  
+  for (i = 0; i < dropdown.length; i++) {
+    dropdown[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var dropdownContent = this.nextElementSibling;
+    if (dropdownContent.style.display === "block") {
+    dropdownContent.style.display = "none";
+    } else {
+    dropdownContent.style.display = "block";
+    }
+    });
+  }
+  </script>
+
+</body>
+</html>

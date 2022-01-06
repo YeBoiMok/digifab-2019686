@@ -20,6 +20,7 @@
     .header {
       background-color: grey;
       color: white;
+      margin-left:190px;
       padding: 15px;
     }
     
@@ -39,11 +40,11 @@
       width: 200px;
       position: fixed;
       z-index: 1;
-      top: relative;
-      left: relative;
+      top: 0;
+      left: 0;
       background-color: #111;
       overflow-x: hidden;
-      padding-top: 10px;
+      padding-top: 20px;
     }
     
     .sidenav a, .dropdown-btn {
@@ -85,19 +86,6 @@
       float: right;
       padding-right: 8px;
     }
-
-    .arrow {
-      border:solid #818181;
-      border-width: 0 3px 3px 0;
-      display: inline-block;
-      padding: 3px;
-    }
-
-    .right {
-      transform: rotate(45deg);
-      -webkit-transform: rotate(45deg);
-    }
-
 
     @media screen and (max-height: 450px) {
       .sidenav {padding-top: 15px;}
