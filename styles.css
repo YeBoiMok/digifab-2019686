@@ -66,6 +66,7 @@
     }
     
     .main {
+      margin-top: 10px;
       margin-left: 200px;
       font-size: 20px;
       padding: 0px 10px;
@@ -85,6 +86,14 @@
     .fa-caret-down {
       float: right;
       padding-right: 8px;
+    }
+
+    .safetywords {
+      font-weight: bold;
+    }
+
+    hr {
+      border: 2px solid black;
     }
 
     @media screen and (max-height: 450px) {
