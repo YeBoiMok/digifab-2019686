@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<link type="text/css" rel="stylesheet" href="styles.css" >
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<body>
+
+<title>Digifab Website</title>
+
+<div class="header">
+  <h1>Final Project</h1>
+</div>
+
+<div class="sidenav">
+  <a href="index.html">Home</a>
+  <a href="aboutme.html">About me</a>
+  <a href="safety.html">Fablab Safety</a>
+  <a href="tools.html">Tools</a>
+  <button class="dropdown-btn">Assignments 
+    <div class="fa fa-caret-down"></div>
+  </button>
+  <div class="dropdown-container">
+    <a href="3dprinting.html">3D printing</a>
+    <a href="lasercut.html">Laser Cutting</a>
+    <a href="webdev.html">Website Development</a>
+    <a href="embeddedprogram.html">Embedded Programming</a>
+  </div>
+  <a href="finalproject.html">Final Project</a>
+</div>
+
+<div class="main">
+  <h1>Deciding on what to make</h1>
+  <p>For my final project, I have decided to make a coin sorter as I wanted to make something that was at least useful and fulfilled all 3
+    conditions of the final project.
+  </p>
+  <h3>Conditions of final project:</h3>
+  <ul>
+    <li>A 3D printed item must be present</li>
+    <li>A Laser-cut item must be present</li>
+    <li>Electronics with Arduino programming</li>
+  </ul>
+
+
+  <h2 style="text-decoration: underline">Prototyping</h2>
+  <p>To make a working coin sorter, I needed to see if there was any potential problems I would face in the future.</p>
+  <p>The idea of the coin sorter is that there would be a slot where you can drop your coin into it, the coin would fall into a sorting board
+    that seperates the coins into its different sizes. There would be Infared Sensors that detect the falling coins which would then be
+    displayed on an LCD screen which helps counts the coins.
+  </p>
+
+
+  <h2 style="text-decoration: underline">3D Modelling</h2>
+  <p>I first made the sorting board as it was a key component in my coin sorter. I drew a board that was 31mm by 220mm, offsetted a line
+    3mm from the bottom so that I could draw the dimensions of the coins on it. The dimensions were gotten from the
+    <a href="https://www.mas.gov.sg/currency/circulation-currency/circulation-currency-coins">Monetary Authority of Singapore</a> so they
+    accurate. I then made rectangles around the diameters to ensure coins could fall through the gap.
+  </p>
+  <img src="./images/sortingsketch.jpg" width="700" height="400">
+  <p>I used the same program to model every other one of my parts like the casing of the coin sorter, the storage box for the coins and the 
+    box for the arduino. 
+  </p>
+  <span><img src="./images/coinboxsketch.jpg" width="500" height="300"><img src="./images/coinstoragesketch.jpg" width="600" height="300">
+    <img src="./images/arduinosketch.jpg" width="500" height="300"></span>
+  <h2 style="text-decoration: underline">Fabrication of Models</h2>
+  <p>To create the sorting board, I used Ultimaker Cura to 3D print it. But since it was too long to fit in the printer, I used the rotation
+    function to turn it so that it would fit inside. I used the same settings as when I printed the chess knight piece.
+  </p>
+  <span><img src="./images/curaprnt.jpg" width="500" height="300"><img src="./images/3d print.jpg" width="500" height="300">
+    <img src="./images/Sorting Board.jpg" width="300" height="300"></span>
+
+
+  <h3>Laser Cutting</h3>
+  <p>For the other parts, I used CorelDraw and the Universal VLS6.60 to laser cut the plywood. I repeated this process for the rest of my
+    other models.
+  </p>
+  <img src="./images/lasrcut.jpg" width="500" height="300">
+
+
+  <h2 style="text-decoration: underline">Arduino Programming</h2>
+  <p>Since I was planning to use an I2C LCD, I first needed to add a library to my Arduino IDE so that I can code it. For this, I used 
+    <a href="https://www.youtube.com/watch?v=q9YC_GVHy5A">this tutorial</a> to help me set up the library and learn how to code the I2C LCD.
+  </p>
+  <p>Initializing the code with definitions and variables, as well as setting LCD cursor</p>
+  <img src="./images/acode1.jpg" width="600" height="300">
+  <p>Turning on LCD and defining input and output pins for my IR Sensors</p>
+  <img src="./images/acode2.jpg" width="350" height="300">
+  <p>Code begins looping with LCD displaying "Coin Sorter" and "if" statements reading for changes in the IR Sensors. If IR sensors have a
+    change in reading, the LCD clears and displays the respective coin collected for 0.5s before clearing and the loop restarts.
+  </p>
+  <span><img src="./images/acode3.jpg" width="600" height="700"><img src="./images/acode4.jpg" width="600" height="700"></span>
+  <h2 style="text-decoration: underline">Testing Electronics</h2>
+  <video width="500" height="300" controls>
+    <source src="./images/electronics.mp4" type="video/mp4">
+  </video>
+
+
+  <h2 style="text-decoration: underline">Final Assembly and Troubleshooting</h2>
+  <p>After everything was fabricated and code was done, I assembled everything together to test if the coin sorter successfully works.
+    But there were a lot of problems with the coin sorter. Firstly, the IR Sensors would not detect the coins falling 100% of the time.
+    Secondly, the sorting board would not work if laid flush on the wall and lastly, the Arduino was very exposed with all the wiring. 
+  </p>
+  <p>So with my time contraints, I had to come up with solutions quickly. For the IR sensors, I would tape them near the ramp so that they
+    had a higher chance of detecting the coins falling. The sorting board was also taped on at the slight angle instead so it would sort
+    the coins better. Sadly, I could not do much with the Arduino as the box was laser-cut on the presentation date itself due to lack
+  of hindsight.</p>
+  <img src="./images/final.jpg" width="1200" height="700">
+
+
+  <h2 style="text-decoration: underline">Thoughts and Reflection</h2>
+  <p>In my opinion, I probably could have done this project a lot more better than this. But due to the lack of hindsight like with the
+    arduino box and IR Sensors, I ended up with a very below average product. If I were to do any improvements to this, I would have
+    laser-cut small pieces of wood and glued them below the ramp to funnel the coins into the IR Sensors. I could have hid the arduino
+    and the wiring by making the coin sorter a bit bigger and fitting the arduino vertically. The sorting board could have been designed
+    with an angled wall to make taping it unncessary. All in all, it was a good learning experience for me and I have gained further insights
+    on what to look out for when working on future projects.
+  </p>
+</div>
+
+<script>
+  var dropdown = document.getElementsByClassName("dropdown-btn");
+  var i;
+  
+  for (i = 0; i < dropdown.length; i++) {
+    dropdown[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var dropdownContent = this.nextElementSibling;
+    if (dropdownContent.style.display === "block") {
+    dropdownContent.style.display = "none";
+    } else {
+    dropdownContent.style.display = "block";
+    }
+    });
+  }
+  </script>
+
+</body>
+</html>

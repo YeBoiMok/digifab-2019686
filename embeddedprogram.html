@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<link type="text/css" rel="stylesheet" href="styles.css" >
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<body>
+
+<title>Digifab Website</title>
+
+<div class="header">
+  <h1>Embedded Programming</h1>
+</div>
+
+<div class="sidenav">
+    <a href="index.html">Home</a>
+    <a href="aboutme.html">About me</a>
+    <a href="safety.html">Fablab Safety</a>
+    <a href="tools.html">Tools</a>
+    <button class="dropdown-btn">Assignments 
+      <div class="fa fa-caret-down"></div>
+    </button>
+    <div class="dropdown-container">
+      <a href="3dprinting.html">3D printing</a>
+      <a href="lasercut.html">Laser Cutting</a>
+      <a href="webdev.html">Website Development</a>
+      <a href="embeddedprogram.html">Embedded Programming</a>
+    </div>
+    <a href="finalproject.html">Final Project</a>
+  </div>
+
+<div class="main">
+  <h2 style="text-decoration: underline">Using Arduino</h2>
+  <p>Arduino is a software that can be installed on your pc to allow you to program a code into your Arduino board. For my case, I used
+    an Arduino UNO which has 12 Digital output pins and 5 Analog output pins. These pins will be used for connections to the different
+    devices. Below is how the Arduino UNO looks like.
+  </p>
+  <img src="./images/Arduino.jpg" width="500" height="500">
+    <p>But what if I wanted to test my connections to see if it is safe and will not short itself? That is when the free software TinkerCAD
+        comes in. TinkerCAD allows us to digitally make our connections to the Arduino as well as test our code in it without needing to 
+        have the physical components.
+    </p>
+    <span><img src="./images/TinkerCAD.jpg" width="750" height="500"><span><img src="./images/TinkerCADcode.jpg" width="500" height="500">
+    <p>Above was the first circuit that I made in TinkerCAD. It is a very simple circuit where the LED lights up after you pushed
+        the push button down and turns off when you let go of the push button. The code is very similar to C++ which was easier for me to
+        learn as I already have prior knowledge in coding in C++.
+    </p>
+    <iframe width="725" height="453" src="https://www.tinkercad.com/embed/40t8kKaituE?editbtn=1" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
+    <p>After making my first circuit, I moved on to making something a little more complicated like a traffic light circuit. The circuit above
+        uses a similar code but now with added delays to simulate how a traffic light would work. Try the circuit for yourself!
+    </p>
+    <p>More of the programming will be shown in my Final Project.</p>
+</div>
+
+<script>
+  var dropdown = document.getElementsByClassName("dropdown-btn");
+  var i;
+  
+  for (i = 0; i < dropdown.length; i++) {
+    dropdown[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var dropdownContent = this.nextElementSibling;
+    if (dropdownContent.style.display === "block") {
+    dropdownContent.style.display = "none";
+    } else {
+    dropdownContent.style.display = "block";
+    }
+    });
+  }
+  </script>
+
+</body>
+</html>
